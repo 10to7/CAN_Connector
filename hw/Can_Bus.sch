@@ -1,0 +1,169 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:10to7_connectors
+EELAYER 24 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_2 P11
+U 1 1 53B9B9D6
+P 5850 2450
+F 0 "P11" V 5800 2450 40  0000 C CNN
+F 1 "BUS" V 5900 2450 40  0000 C CNN
+F 2 "" H 5850 2450 60  0000 C CNN
+F 3 "" H 5850 2450 60  0000 C CNN
+	1    5850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2550 5500 2550
+Connection ~ 5300 2550
+Wire Wire Line
+	4550 2350 5500 2350
+$Comp
+L R R1
+U 1 1 53B9BB9D
+P 5050 3650
+F 0 "R1" V 5130 3650 40  0000 C CNN
+F 1 "120" V 5057 3651 40  0000 C CNN
+F 2 "" V 4980 3650 30  0000 C CNN
+F 3 "" H 5050 3650 30  0000 C CNN
+	1    5050 3650
+	0    1    1    0   
+$EndComp
+Connection ~ 4800 2350
+$Comp
+L CONN_2 P1
+U 1 1 53B9BD69
+P 4200 2450
+F 0 "P1" V 4150 2450 40  0000 C CNN
+F 1 "BUS" V 4250 2450 40  0000 C CNN
+F 2 "" H 4200 2450 60  0000 C CNN
+F 3 "" H 4200 2450 60  0000 C CNN
+	1    4200 2450
+	-1   0    0    1   
+$EndComp
+Text Label 4800 2250 1    60   ~ 0
+CAN_L
+Text Label 5300 2250 1    60   ~ 0
+CAN_H
+Connection ~ 5300 3650
+Connection ~ 4800 3650
+$Comp
+L JUMPER JP1
+U 1 1 53B9BF24
+P 5300 3250
+F 0 "JP1" H 5300 3400 60  0000 C CNN
+F 1 "JUMPER" H 5300 3170 40  0000 C CNN
+F 2 "" H 5300 3250 60  0000 C CNN
+F 3 "" H 5300 3250 60  0000 C CNN
+	1    5300 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 3650 5300 3550
+Wire Wire Line
+	4800 1350 4800 3650
+$Comp
+L CONN_2 P33
+U 1 1 53B9BF53
+P 5850 1850
+F 0 "P33" V 5800 1850 40  0000 C CNN
+F 1 "CONN_2" V 5900 1850 40  0000 C CNN
+F 2 "" H 5850 1850 60  0000 C CNN
+F 3 "" H 5850 1850 60  0000 C CNN
+	1    5850 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1550 5300 2950
+Wire Wire Line
+	5300 1950 5500 1950
+Wire Wire Line
+	4800 1750 5500 1750
+$Comp
+L CONN_2 P3
+U 1 1 53B9BFB6
+P 5850 1450
+F 0 "P3" V 5800 1450 40  0000 C CNN
+F 1 "CONN_2" V 5900 1450 40  0000 C CNN
+F 2 "" H 5850 1450 60  0000 C CNN
+F 3 "" H 5850 1450 60  0000 C CNN
+	1    5850 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1550 5500 1550
+Connection ~ 5300 1950
+Wire Wire Line
+	4800 1350 5500 1350
+Connection ~ 4800 1750
+$Comp
+L CONN_2 P22
+U 1 1 53B9BFFD
+P 5850 2850
+F 0 "P22" V 5800 2850 40  0000 C CNN
+F 1 "BUS" V 5900 2850 40  0000 C CNN
+F 2 "" H 5850 2850 60  0000 C CNN
+F 3 "" H 5850 2850 60  0000 C CNN
+	1    5850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P2
+U 1 1 53B9C011
+P 4200 2850
+F 0 "P2" V 4150 2850 40  0000 C CNN
+F 1 "BUS" V 4250 2850 40  0000 C CNN
+F 2 "" H 4200 2850 60  0000 C CNN
+F 3 "" H 4200 2850 60  0000 C CNN
+	1    4200 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2950 5500 2950
+Connection ~ 5300 2950
+Wire Wire Line
+	4550 2750 5500 2750
+Connection ~ 4800 2750
+$EndSCHEMATC

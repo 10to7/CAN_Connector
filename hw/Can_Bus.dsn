@@ -1,0 +1,125 @@
+(pcb /home/elaine/Projects/CAN_Connector/hw/Can_Bus.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "(2014-03-19 BZR 4756)-product")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (rect pcb 116426 -99954.2 145279 -127646)
+    )
+    (via "Via[0-1]_889:635_um")
+    (rule
+      (width 254)
+      (clearance 254.1)
+      (clearance 254.1 (type default_smd))
+      (clearance 63.5 (type smd_smd))
+    )
+  )
+  (placement
+    (component Pin_Headers:Pin_Header_Straight_1x02
+      (place JP1 140400 -113800 front 270 (PN JUMPER))
+      (place P1 127800 -105400 front 0 (PN BUS))
+      (place P2 128200 -122200 front 0 (PN BUS))
+      (place P3 129800 -113800 front 90 (PN CONN_2))
+    )
+    (component 10to7_connectors:2_Pin_Screw_5mm_Pitch
+      (place P11 136600 -105400 front 0 (PN BUS))
+      (place P22 137000 -122200 front 180 (PN BUS))
+      (place P33 122000 -113800 front 90 (PN CONN_2))
+    )
+    (component 10to7_sm_standard:SM0402
+      (place R1 137000 -113800 front 180 (PN 120))
+    )
+  )
+  (library
+    (image Pin_Headers:Pin_Header_Straight_1x02
+      (outline (path signal 254  0 1270  0 -1270))
+      (outline (path signal 254  -2540 1270  -2540 -1270))
+      (outline (path signal 254  -2540 -1270  0 -1270))
+      (outline (path signal 254  0 -1270  2540 -1270))
+      (outline (path signal 254  2540 -1270  2540 1270))
+      (outline (path signal 254  2540 1270  -2540 1270))
+      (pin Rect[A]Pad_2032x2032_um 1 -1270 0)
+      (pin Oval[A]Pad_2032x2032_um 2 1270 0)
+    )
+    (image 10to7_connectors:2_Pin_Screw_5mm_Pitch
+      (outline (path signal 381  -5001.26 2499.36  5001.26 2499.36))
+      (outline (path signal 381  -5001.26 5001.26  -5001.26 -5001.26))
+      (outline (path signal 381  -5001.26 -5001.26  5001.26 -5001.26))
+      (outline (path signal 381  5001.26 -5001.26  5001.26 5001.26))
+      (outline (path signal 381  5001.26 5001.26  -5001.26 5001.26))
+      (pin Oval[A]Pad_1998.98x3014.98_um 1 -2499.36 0)
+      (pin Oval[A]Pad_1998.98x3014.98_um 2 2499.36 0)
+    )
+    (image 10to7_sm_standard:SM0402
+      (outline (path signal 150  -975 -625  975 -625))
+      (outline (path signal 150  975 -625  975 625))
+      (outline (path signal 150  975 625  -975 625))
+      (outline (path signal 150  -975 625  -975 -625))
+      (pin Rect[T]Pad_398.78x599.44_um 1 -449.58 0)
+      (pin Rect[T]Pad_398.78x599.44_um 2 449.58 0)
+    )
+    (padstack Oval[A]Pad_1998.98x3014.98_um
+      (shape (path F.Cu 1998.98  0 -508  0 508))
+      (shape (path B.Cu 1998.98  0 -508  0 508))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2032x2032_um
+      (shape (path F.Cu 2032  0 0  0 0))
+      (shape (path B.Cu 2032  0 0  0 0))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_2032x2032_um
+      (shape (rect F.Cu -1016 -1016 1016 1016))
+      (shape (rect B.Cu -1016 -1016 1016 1016))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_398.78x599.44_um
+      (shape (rect F.Cu -199.39 -299.72 199.39 299.72))
+      (attach off)
+    )
+    (padstack "Via[0-1]_889:635_um"
+      (shape (circle F.Cu 889))
+      (shape (circle B.Cu 889))
+      (attach off)
+    )
+  )
+  (network
+    (net /CAN_H
+      (pins JP1-1 P1-1 P2-1 P3-2 P11-2 P22-2 P33-2)
+    )
+    (net "Net-(JP1-Pad2)"
+      (pins JP1-2 R1-1)
+    )
+    (net /CAN_L
+      (pins P1-2 P2-2 P3-1 P11-1 P22-1 P33-1 R1-2)
+    )
+    (class kicad_default "" /CAN_H /CAN_L "Net-(JP1-Pad2)"
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 254)
+        (clearance 254.1)
+      )
+    )
+  )
+  (wiring
+  )
+)
